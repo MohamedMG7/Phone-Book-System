@@ -8,11 +8,14 @@ namespace phone_book_system
 {
 	internal class Contact
 	{
-		string Name { set; get; }
-		string Phone_Number { set; get; }
-		string Second_Phone_Number { set; get; }
-		bool IsFavourite { set; get; } 
 
+		
+		public string Name { set; get; }
+		public string Phone_Number { set; get; }
+		public string Second_Phone_Number { set; get; }
+		public bool IsFavourite { set; get; }
+
+		
 
 	}
 }

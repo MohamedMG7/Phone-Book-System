@@ -4,7 +4,13 @@
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
+
+			ContactManager contactManager = new ContactManager();
+
+			Session s = new Session(contactManager);
+			
+			s.Handle_Answer_Code();
+			
 		}
 	}
 }
