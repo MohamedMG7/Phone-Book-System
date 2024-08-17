@@ -14,10 +14,15 @@ namespace phone_book_system
 			_contacts.Add(contact);
 		}
 
-		public void RemoveContact(string Name) {
-			Contact contact = GetContact(Name);
-			_contacts.Remove(contact);
-			Console.WriteLine("Deleted saccesfully");
+		public void RemoveContact(Contact contact) {
+			if (_contacts.Contains(contact)) {
+				_contacts.Remove(contact);
+				Console.WriteLine("Deleted saccesfully");
+			}
+			else {
+				Console.WriteLine("Contact Not Found");
+			}
+			
 		}
 
 		public List<Contact> GetContacts() {
@@ -31,13 +36,13 @@ namespace phone_book_system
 
 
 		// this function takes a contact edit it's information 
-		public Contact EditContact(string PhoneNumber, string NewName, string NewPhoneNumber, string NewSecondPhoneNumber, bool NewIsFavourite) {
-			Contact contact = GetContact(PhoneNumber);
+		public void EditContact(Contact contact, string NewName, string NewPhoneNumber, string NewSecondPhoneNumber, bool NewIsFavourite) {
+			
 			contact.Name = NewName;
 			contact.Phone_Number = NewPhoneNumber;
 			contact.Second_Phone_Number = NewSecondPhoneNumber;
 			contact.IsFavourite = NewIsFavourite;
-			return contact;
-		}
+
+        }
 	}
 }
