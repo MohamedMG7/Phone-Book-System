@@ -38,7 +38,7 @@ namespace phone_book_system
 					case "1": Display_Contacts(); break;
 					case "2": Add_Contact(); break;
 					//case "3": Edit_Contact(); break;
-					//case "4": Search_Contact(); break;
+					case "4": Search_Contact(); break;
 					case "5": return;  // Exit the method, ending the loop and closing the application
 					default: Console.WriteLine("Invalid option. Please try again."); break;
 				}
@@ -65,8 +65,6 @@ namespace phone_book_system
 				}
 				
 			}
-
-			Handle_Answer_Code();
 		}
 
 		public void Add_Contact() {
@@ -82,18 +80,31 @@ namespace phone_book_system
 
 			_contactManager.AddContact(c);
 			Console.WriteLine("Added");
-			Console.WriteLine(" ");
-
-			Handle_Answer_Code();
+			Console.WriteLine(" ");	
 		}
 
-		//public Contact Edit_Contact() {
-		//	return Contacts[0];
-		//}
+		public Contact Edit_Contact()
+		{
+			Console.Write("What Contact Do You Want To Change: ");
+			string Name = Console.ReadLine();
+			Contact contact = _contactManager.GetContact(Name);
+			Console.Write($"The Old Name is {contact.Name}, What is the New Name write skip to skip this: ");
+			string newName = Console.ReadLine();
+			return Contacts[0];
+		}
 
-		//public Search_Contact() { 
-		
-		//}
+		public void Search_Contact() {
+			Console.Write("Enter The Name Of The Contact: ");
+			string Name = Console.ReadLine();
+			Console.WriteLine();
+			Contact contact = _contactManager.GetContact(Name);
+			Console.WriteLine($"Name: {contact.Name}");
+			Console.WriteLine($"Phone Number: {contact.Phone_Number}");
+			Console.WriteLine($"Second Phone Number: {contact.Second_Phone_Number}");
+			Console.WriteLine($"Favourite: {(contact.IsFavourite ? "Yes" : "No")}");
+			Console.WriteLine("------------------------------");
+			Console.WriteLine(" ");
+		}
 
 	}
 }
