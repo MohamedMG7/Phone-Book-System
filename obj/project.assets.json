@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\maham\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\My Projects\\phone book system\\phone book system.csproj",
+      "projectUniqueName": "C:\\Users\\maham\\OneDrive\\Desktop\\Phone-Book-System\\phone book system.csproj",
       "projectName": "phone book system",
-      "projectPath": "C:\\Users\\user\\Desktop\\My Projects\\phone book system\\phone book system.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\My Projects\\phone book system\\obj\\",
+      "projectPath": "C:\\Users\\maham\\OneDrive\\Desktop\\Phone-Book-System\\phone book system.csproj",
+      "packagesPath": "C:\\Users\\maham\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maham\\OneDrive\\Desktop\\Phone-Book-System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maham\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
